@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StudyMate AI | Your Study Partner</title>
+
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+  <main class="app-shell">
+
+    <!-- Header -->
+    <header class="header">
+
+      <div class="brand">
+        <div class="logo" aria-hidden="true">✦</div>
+
+        <div class="brand-text">
+          <h1>StudyMate <span>AI</span></h1>
+          <p>Your personal study partner</p>
+        </div>
+      </div>
+
+      <button id="clearBtn" class="clear-btn" type="button">
+        ↻ Clear chat
+      </button>
+
+    </header>
+
+
+    <!-- Chat Area -->
+    <section class="chat-area">
+
+      <div class="welcome-section">
+        <div class="welcome-icon" aria-hidden="true">🎓</div>
+
+        <p class="welcome-label">YOUR AI STUDY COMPANION</p>
+
+        <h2>Learn something <span>new today.</span></h2>
+
+        <p class="welcome-description">
+          Have a question? Let's break it down together.
+          Ask about programming, technology, or any topic you're studying.
+        </p>
+      </div>
+
+
+      <section id="chat" class="chat" aria-live="polite">
+
+        <div class="message assistant">
+
+          <div class="avatar">AI</div>
+
+          <div class="bubble">
+            Hi! 👋 I'm your study assistant.
+
+            <br><br>
+
+            I'm here to help you understand difficult concepts
+            in simple language. What would you like to learn today?
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+
+    <!-- Suggested Questions -->
+    <section class="suggestion-section">
+
+      <p class="section-label">NEED SOME INSPIRATION?</p>
+
+      <div class="suggestions" aria-label="Suggested questions">
+
+        <button type="button" class="suggestion">
+          <span class="suggestion-icon">🐍</span>
+          <span>
+            <strong>Python basics</strong>
+            <small>Understand loops and conditions</small>
+          </span>
+          <span class="suggestion-arrow">↗</span>
+        </button>
+
+        <button type="button" class="suggestion">
+          <span class="suggestion-icon">🌐</span>
+          <span>
+            <strong>Web development</strong>
+            <small>Learn about APIs</small>
+          </span>
+          <span class="suggestion-arrow">↗</span>
+        </button>
+
+        <button type="button" class="suggestion">
+          <span class="suggestion-icon">💡</span>
+          <span>
+            <strong>OOP concepts</strong>
+            <small>Explore OOP with examples</small>
+          </span>
+          <span class="suggestion-arrow">↗</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- Message Input -->
+    <form id="chatForm" class="composer">
+
+      <label class="sr-only" for="messageInput">
+        Your question
+      </label>
+
+      <textarea
+        id="messageInput"
+        rows="1"
+        maxlength="2000"
+        placeholder="Ask anything you're curious about..."
+        required
+      ></textarea>
+
+      <button id="sendBtn" type="submit" aria-label="Send message">
+        <span>Send</span>
+        <span aria-hidden="true">➤</span>
+      </button>
+
+    </form>
+
+
+    <!-- Disclaimer -->
+    <p class="note">
+      ✨ Made for curious minds.
+      AI can make mistakes, so verify important information.
+    </p>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
